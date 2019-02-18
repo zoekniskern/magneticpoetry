@@ -96,6 +96,7 @@ class ViewController: UIViewController {
         if segue.identifier == "setWordType"{
             let typesVC = segue.destination.children[0] as! WordTypeVC
             typesVC.types = ["Type 1", "Type 2", "Type 3"]
+            typesVC.title = "Choose a Word Set"
         }
     }
 

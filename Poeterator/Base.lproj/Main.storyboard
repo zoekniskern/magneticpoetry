@@ -62,7 +62,13 @@
                             <outlet property="delegate" destination="jEA-pf-Tfo" id="HR7-NQ-ASA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="frO-f3-578"/>
+                    <navigationItem key="navigationItem" title="Title" id="T3K-HI-Qvc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9sN-V1-dHz">
+                            <connections>
+                                <action selector="cancelTapped" destination="jEA-pf-Tfo" id="j08-fT-iCb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Udn-5f-MNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

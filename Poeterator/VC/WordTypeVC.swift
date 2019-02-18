@@ -42,6 +42,11 @@ class WordTypeVC: UITableViewController {
         cell.textLabel?.text = types[indexPath.row]
         return cell
     }
+    
+    // dismiss table selection
+    @IBAction func cancelTapped(){
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
