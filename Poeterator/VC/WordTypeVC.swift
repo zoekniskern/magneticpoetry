@@ -10,7 +10,8 @@ import UIKit
 
 class WordTypeVC: UITableViewController {
     
-    let types = ["Type 1", "Type 2", "Type 3"]
+    //handled in segue code //let types = ["Type 1", "Type 2", "Type 3"]
+    var types = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

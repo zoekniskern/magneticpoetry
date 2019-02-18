@@ -84,10 +84,19 @@ class ViewController: UIViewController {
         }
     }
     
+    //control touch events
     @objc func doPanGesture(panGesture: UIPanGestureRecognizer){
         let label = panGesture.view as! UILabel
         let position = panGesture.location(in: view)
         label.center = position
+    }
+    
+    //override for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "setWordType"{
+            let typesVC = segue.destination.children[0] as! WordTypeVC
+            typesVC.types = ["Type 1", "Type 2", "Type 3"]
+        }
     }
 
 }

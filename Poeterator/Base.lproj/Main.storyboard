@@ -24,7 +24,7 @@
                                 <items>
                                     <barButtonItem title="Word Sets" id="2Ix-Im-eDn">
                                         <connections>
-                                            <segue destination="vGT-wb-OCI" kind="popoverPresentation" popoverAnchorBarButtonItem="2Ix-Im-eDn" id="rw6-ZD-Tko">
+                                            <segue destination="vGT-wb-OCI" kind="popoverPresentation" identifier="setWordType" popoverAnchorBarButtonItem="2Ix-Im-eDn" id="rw6-ZD-Tko">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
