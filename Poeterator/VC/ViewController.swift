@@ -9,16 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let words = [" away ", " chant ", " after ", " a ", " she ", " he ", " they ", " jump ", " swim ", " dream ", " leap ", " keep ", " ing ", " s ", " es ", " you ", " me ", " they ", " under ", " over ", " twilight ", " ly ", " light ", " wistful ", " ed "]
+    let generic = [" away ", " chant ", " after ", " a ", " she ", " he ", " they ", " jump ", " swim ", " dream ", " leap ", " keep ", " ing ", " s ", " es ", " you ", " me ", " they ", " under ", " over ", " twilight ", " ly ", " light ", " wistful ", " ed "]
+    
+    var types = [WordList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        placeWords()
+        
+        placeWords(words: generic)
+        
+        //placeWords(words: types[0].words)
     }
     
-    func placeWords(){
+    //place words
+    //takes array of words
+    func placeWords(words: [String]){
         let wid = self.view.frame.size.width
-        let hei = self.view.frame.size.height
+        //let hei = self.view.frame.size.height
         view.backgroundColor = UIColor(red:0.90, green:0.93, blue:0.94, alpha:1.0)
         var x:CGFloat = 20
         var y:CGFloat = 40
@@ -84,6 +91,36 @@ class ViewController: UIViewController {
         }
     }
     
+    //delete words func
+    func clearWords(){
+        for v in view.subviews{
+            if v is UILabel{
+                v.removeFromSuperview()
+            }
+        }
+    }
+    
+    //clear button action
+    @IBAction func clearTapped(){
+        clearWords()
+    }
+    
+    //DONE BUTTON
+    @IBAction func unwindToMain(segue:UIStoryboardSegue){
+        if segue.identifier == "TypeDoneTapped"{
+            let typeVC = segue.source as! WordTypeVC
+            let type = typeVC.selectedType
+            let words = typeVC.selectedWords
+            print(type)
+            
+            //DELETE WORDS
+            clearWords()
+            
+            //CHANGE WORDS
+            placeWords(words: words)
+        }
+    }
+    
     //control touch events
     @objc func doPanGesture(panGesture: UIPanGestureRecognizer){
         let label = panGesture.view as! UILabel
@@ -95,7 +132,6 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "setWordType"{
             let typesVC = segue.destination.children[0] as! WordTypeVC
-            typesVC.types = ["Type 1", "Type 2", "Type 3"]
             typesVC.title = "Choose a Word Set"
         }
     }

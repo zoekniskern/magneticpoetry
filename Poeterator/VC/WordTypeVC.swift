@@ -11,7 +11,9 @@ import UIKit
 class WordTypeVC: UITableViewController {
     
     //handled in segue code //let types = ["Type 1", "Type 2", "Type 3"]
-    var types = [String]()
+    var types = [WordList]()
+    var selectedType:String = "generic"
+    var selectedWords:[String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,26 +23,41 @@ class WordTypeVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        types.append(WordList(type: "generic", words: [" away ", " chant ", " after ", " a ", " she ", " he ", " they ", " jump ", " swim ", " dream ", " leap ", " keep ", " ing ", " s ", " es ", " you ", " me ", " they ", " under ", " over ", " twilight ", " ly ", " light ", " wistful ", " ed "]))
+        types.append(WordList(type: "colors", words: [" purple ", " blue ", " orange ", " chartuse ", " pink ", " magenta ", " aqua "]))
+        types.append(WordList(type: "random", words: [" yolo ", " lmao ", " lol ", " hai ", " lmfao ", " ty ", " brb ", " omw ", " b4n "]))
     }
 
     // MARK: - Table view data source
-
+    //number of sections
+    //handled dynamically
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
+    //number of rows in section
+    //handled dynamically
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return types.count
     }
 
+    //cell for row at
+    //loaded from types array
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Typecell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = types[indexPath.row]
+        cell.textLabel?.text = types[indexPath.row].type
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedType = types[indexPath.row].type
+        selectedWords = types[indexPath.row].words
+        //print(selectedType)
     }
     
     // dismiss table selection

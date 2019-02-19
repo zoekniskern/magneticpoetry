@@ -29,6 +29,11 @@
                                             </segue>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Clear" id="8Gb-8d-6RL">
+                                        <connections>
+                                            <action selector="clearTapped" destination="BYZ-38-t0r" id="GxK-fr-GgH"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -68,9 +73,15 @@
                                 <action selector="cancelTapped" destination="jEA-pf-Tfo" id="j08-fT-iCb"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="vvQ-m4-pLh">
+                            <connections>
+                                <segue destination="Vjn-AS-liS" kind="unwind" identifier="TypeDoneTapped" unwindAction="unwindToMainWithSegue:" id="0oD-C2-5n1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Udn-5f-MNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vjn-AS-liS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2336.8000000000002" y="26.53673163418291"/>
         </scene>

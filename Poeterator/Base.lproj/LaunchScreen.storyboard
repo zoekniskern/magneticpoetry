@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad10_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,29 +15,26 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poeterator.Assets.sgjpg-1" translatesAutoresizingMaskIntoConstraints="NO" id="RdB-e3-kIj">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="RdB-e3-kIj" secondAttribute="height" multiplier="192:251" id="P89-aq-g0z"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poeterator.Assets.sgjpg-1" translatesAutoresizingMaskIntoConstraints="NO" id="RdB-e3-kIj">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1092"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="RdB-e3-kIj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Vp-RJ-fVN"/>
-                            <constraint firstItem="RdB-e3-kIj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="X1u-5c-4l0"/>
-                            <constraint firstItem="RdB-e3-kIj" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="o5c-1J-6OY"/>
-                            <constraint firstAttribute="trailing" secondItem="RdB-e3-kIj" secondAttribute="trailing" id="puZ-Hp-dEe"/>
+                            <constraint firstAttribute="bottom" secondItem="RdB-e3-kIj" secondAttribute="bottom" constant="20" symbolic="YES" id="AUi-T2-YMR"/>
+                            <constraint firstItem="RdB-e3-kIj" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="K58-r5-sF3"/>
+                            <constraint firstItem="RdB-e3-kIj" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="kwd-o1-6BF"/>
+                            <constraint firstAttribute="trailing" secondItem="RdB-e3-kIj" secondAttribute="trailing" id="vit-gJ-IgE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49.275362318840585" y="372.99107142857139"/>
+            <point key="canvasLocation" x="48.920863309352519" y="372.30215827338128"/>
         </scene>
     </scenes>
     <resources>
