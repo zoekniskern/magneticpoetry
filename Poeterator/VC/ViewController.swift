@@ -135,6 +135,11 @@ class ViewController: UIViewController {
             typesVC.title = "Choose a Word Set"
         }
     }
+    
+    //hide status bar
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
 }
 
