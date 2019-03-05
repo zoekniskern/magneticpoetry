@@ -10,11 +10,7 @@ import UIKit
 
 class WordTypeVC: UITableViewController {
     
-    //handled in segue code //let types = ["Type 1", "Type 2", "Type 3"]
-    var types = [WordList]()
-    var selectedType:String = "generic"
-    var selectedWords:[String] = []
-
+    //MARK: - Initialization -
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,9 +20,7 @@ class WordTypeVC: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        types.append(WordList(type: "generic", words: [" away ", " chant ", " after ", " a ", " she ", " he ", " they ", " jump ", " swim ", " dream ", " leap ", " keep ", " ing ", " s ", " es ", " you ", " me ", " they ", " under ", " over ", " twilight ", " ly ", " light ", " wistful ", " ed "]))
-        types.append(WordList(type: "colors", words: [" purple ", " blue ", " orange ", " chartuse ", " pink ", " magenta ", " aqua "]))
-        types.append(WordList(type: "random", words: [" yolo ", " lmao ", " lol ", " hai ", " lmfao ", " ty ", " brb ", " omw ", " b4n "]))
+        
     }
 
     // MARK: - Table view data source
@@ -41,7 +35,7 @@ class WordTypeVC: UITableViewController {
     //handled dynamically
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return types.count
+        return appData.shared.Alltypes.count
     }
 
     //cell for row at
@@ -50,16 +44,18 @@ class WordTypeVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Typecell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = types[indexPath.row].type
+        cell.textLabel?.text = appData.shared.Alltypes[indexPath.row].type
         return cell
     }
     
+    //MARK: - SELECTION CHOICES -
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedType = types[indexPath.row].type
-        selectedWords = types[indexPath.row].words
+        appData.shared.selectedType = appData.shared.Alltypes[indexPath.row].type
+        appData.shared.selectedWords = appData.shared.Alltypes[indexPath.row].words
         //print(selectedType)
     }
     
+    //MARK: - DISMISS -
     // dismiss table selection
     @IBAction func cancelTapped(){
         dismiss(animated: true, completion: nil)

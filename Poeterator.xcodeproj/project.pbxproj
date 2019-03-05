@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3F56B3F2221A4A6800402424 /* WordTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56B3F1221A4A6800402424 /* WordTypeVC.swift */; };
 		3FCA535A221CBD6200977F4C /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA5359221CBD6200977F4C /* WordList.swift */; };
+		3FDD5EAB222DE0AC00F8D0EC /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD5EAA222DE0AC00F8D0EC /* AppData.swift */; };
+		3FDD5EAD222DF8C000F8D0EC /* FontSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD5EAC222DF8C000F8D0EC /* FontSizing.swift */; };
+		3FDD5EAF222DF98800F8D0EC /* takeSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD5EAE222DF98800F8D0EC /* takeSnapshot.swift */; };
 		6CF8A5F422065AD60017C827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF8A5F322065AD60017C827 /* AppDelegate.swift */; };
 		6CF8A5F622065AD60017C827 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF8A5F522065AD60017C827 /* ViewController.swift */; };
 		6CF8A5F922065AD60017C827 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8A5F722065AD60017C827 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		3F56B3F1221A4A6800402424 /* WordTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTypeVC.swift; sourceTree = "<group>"; };
 		3FCA5359221CBD6200977F4C /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
+		3FDD5EAA222DE0AC00F8D0EC /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		3FDD5EAC222DF8C000F8D0EC /* FontSizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizing.swift; sourceTree = "<group>"; };
+		3FDD5EAE222DF98800F8D0EC /* takeSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = takeSnapshot.swift; sourceTree = "<group>"; };
 		6CF8A5F022065AD60017C827 /* Poeterator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poeterator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF8A5F322065AD60017C827 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CF8A5F522065AD60017C827 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,8 +58,18 @@
 			isa = PBXGroup;
 			children = (
 				3FCA5359221CBD6200977F4C /* WordList.swift */,
+				3FDD5EAA222DE0AC00F8D0EC /* AppData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3FDD5EB0222DFDF100F8D0EC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3FDD5EAC222DF8C000F8D0EC /* FontSizing.swift */,
+				3FDD5EAE222DF98800F8D0EC /* takeSnapshot.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		6CF8A5E722065AD60017C827 = {
@@ -78,6 +94,7 @@
 				6CF8A5F322065AD60017C827 /* AppDelegate.swift */,
 				3F56B3F0221A4A2C00402424 /* VC */,
 				3FCA5358221CBD3700977F4C /* Models */,
+				3FDD5EB0222DFDF100F8D0EC /* Extensions */,
 				6CF8A5F722065AD60017C827 /* Main.storyboard */,
 				6CF8A5FA22065AD70017C827 /* Assets.xcassets */,
 				6CF8A5FC22065AD70017C827 /* LaunchScreen.storyboard */,
@@ -157,10 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FDD5EAD222DF8C000F8D0EC /* FontSizing.swift in Sources */,
 				6CF8A5F622065AD60017C827 /* ViewController.swift in Sources */,
 				3FCA535A221CBD6200977F4C /* WordList.swift in Sources */,
 				6CF8A5F422065AD60017C827 /* AppDelegate.swift in Sources */,
 				3F56B3F2221A4A6800402424 /* WordTypeVC.swift in Sources */,
+				3FDD5EAF222DF98800F8D0EC /* takeSnapshot.swift in Sources */,
+				3FDD5EAB222DE0AC00F8D0EC /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
